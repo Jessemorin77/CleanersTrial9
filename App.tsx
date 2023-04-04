@@ -1,12 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+
+import UserStack from './src/navigation/UserStack';
+import 'react-native-gesture-handler';
+import { useAuth } from './src/hooks/useAuth';
+import AuthStack from './src/navigation/AuthStack';
 
 export default function App() {
+  const{ user } = useAuth();
+  
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <NavigationContainer>
+      {user ? <UserStack /> : <AuthStack />}
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   );
 }
 
@@ -18,3 +26,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
