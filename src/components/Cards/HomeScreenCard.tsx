@@ -2,6 +2,8 @@ import React from 'react';
 import { View, ScrollView, StyleSheet, Image } from 'react-native';
 import { Text, Card, Button, Icon } from '@rneui/themed';
 
+import { useNavigation } from '@react-navigation/native';
+
 const users = [
 {
   name: 'Private Cleaner',
@@ -22,7 +24,9 @@ const users = [
 type CardsComponentsProps = {};
 
 const Cards: React.FunctionComponent<CardsComponentsProps> = () => {
+  const navigation = useNavigation();
 return (
+  
   <>
     <ScrollView>
       <View style={styles.container}>
@@ -40,11 +44,13 @@ return (
             Find cleaners for any size project
           </Text>
           <Button
+          onPress={() => navigation.navigate('JobRequestScreenSelect')}
             icon={
               <Icon
                 name="code"
                 color="#ffffff"
                 iconStyle={{ marginRight: 10 }}
+                
               />
             }
             buttonStyle={{
@@ -71,6 +77,7 @@ return (
             Add your Properties to get started!
           </Text>
           <Button
+          onPress={() => navigation.navigate('Properties')}
             icon={
               <Icon
                 name="code"
@@ -108,19 +115,19 @@ return (
         <Card containerStyle={{ marginTop: 15 }}>
           <Card.Title>FEATURES</Card.Title>
           <Card.Divider />
-          <Text style={styles.fonts} h1>
-            Add Property
-          </Text>
-          <Text style={styles.fonts} h2>
-            Select Job Type
+          <Text style={styles.fonts} h3>
+            1. Add Properties
           </Text>
           <Text style={styles.fonts} h3>
-            Select Cleaners in Your area
+            2. Select Property to Clean
           </Text>
-          <Text style={styles.fonts} h4>
-            Schedule Appointment
+          <Text style={styles.fonts} h3>
+            3. Post Listing
           </Text>
-          <Text style={styles.fonts}>You are now all set!</Text>
+          <Text style={styles.fonts} h3>
+            4. Choose from your bids
+          </Text>
+          <Text style={styles.fonts} h3>You are now all set!</Text>
         </Card>
         
       </View>

@@ -5,13 +5,15 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import SwitchComponent from '../components/SearchBar/SearchBar';
 import Cards from '../components/Cards/HomeScreenCard';
 import CardList from '../components/Flatlist/HorizontalCards';
+import RangeDatePicker from '../components/Calendar/DatePicker';
+
 const HomeScreen = () => {
   return (
     <ScrollView>
  <View style={styles.container}>
         
         <SwitchComponent />
-        <CardList/>
+        
         <Cards />
         
     </View>

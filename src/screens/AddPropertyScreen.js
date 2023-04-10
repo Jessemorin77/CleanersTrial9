@@ -98,7 +98,7 @@ const AddPropertyScreen = ({ navigation }) => {
        >
         <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.container}>
-            <Text>Add Property</Text>
+           
             {propertyData.image && (
                 <Image source={{ uri: propertyData.image }} style={{ width: 200, height: 200 }} />
             )}
@@ -132,11 +132,7 @@ const AddPropertyScreen = ({ navigation }) => {
             <TouchableOpacity style={styles.button} onPress={addProperty}>
                 <Text style={styles.buttonText}>Add Property</Text>
             </TouchableOpacity>
-            <TouchableHighlight style={styles.button} onPress={() => navigation.navigate('Properties')}>
-                <View style={styles.buttonContent}>
-                    <Text style={styles.buttonText}>Add Property</Text>
-                </View>
-            </TouchableHighlight>
+         
         </View>
            </ScrollView>
        </KeyboardAvoidingView>
