@@ -1,0 +1,52 @@
+# CleanersTrial9
+
+##Welcome to my final Project here are the steps you will need to take to get this running on your computer
+
+###Features:
+
+Slideable Intro Screen,
+full auth process/datastorage/tokens/Authnavigation, 
+homescreen cards and search bar(nonfunctional), 
+image picker and data storage for properties, 
+Property data retrieval and render, 
+basic listing process, 
+interactable calendar, 
+navbar system, 
+App Drawer Navigation
+
+##Dependencies
+
+Node.js:
+
+Expo Cli:https://docs.expo.dev/archive/expo-cli/
+
+Component Libraries: 
+
+Kitten UI:npm i @ui-kitten/components @eva-design/eva react-native-svg
+
+Native Paper:npm install react-native-paper
+npm install react-native-safe-area-context
+npm install react-native-vector-icons
+
+React Native Navigation:
+
+npm install @react-navigation/native @react-navigation/stack @react-navigation/drawer @react-navigation/bottom-tabs @react-navigation/native-stack
+
+npx expo install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-gesture-handler react-native-reanimated 
+
+React:npm i react
+
+React Native: npm i react-native
+
+expo:npm i expo
+https://docs.expo.dev/get-started/installation/
+
+Gesture Handler: npm i react-native-gesture-handler
+
+Firebase: npm i firebase
+
+Calendar: npm i react-native-calendars
+
+**Any Missing dependencies not listed can be fould simply at https://www.npmjs.com/
+
+Image Picker: npm i expo-image-picker
